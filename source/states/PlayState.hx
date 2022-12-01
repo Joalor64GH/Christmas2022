@@ -13,6 +13,8 @@ import objects.*;
 
 class PlayState extends FlxState
 {
+    public var WIPText:FlxText;
+
     override public function create()
     {
         super.create();
@@ -26,9 +28,10 @@ class PlayState extends FlxState
 		bg.antialiasing = true;
 		add(bg);
 
-        var text = new flixel.text.FlxText(0, 0, 0, "Work In Progress", 64);
-        text.screenCenter();
-        add(text);
+        WIPText = new FlxText(0, 0, FlxG.width, "WORK IN PROGRESS", 32);
+		WIPText.setFormat(Paths.font("vcr.ttf"), 54, FlxColor.WHITE, FlxTextAlign.CENTER,FlxTextBorderStyle.OUTLINE,FlxColor.BLACK);
+
+		add(WIPText);
     }
 
     override public function update(elapsed:Float)
