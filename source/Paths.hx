@@ -1,7 +1,6 @@
 package;
 
 import openfl.utils.Assets as OpenFlAssets;
-
 import flixel.FlxG;
 import flixel.graphics.frames.FlxAtlasFrames;
 
@@ -20,12 +19,12 @@ class Paths
 		return path;
 	}
 
-        inline static public function txt(key:String)
+	inline static public function txt(key:String)
 	{
 		return file('data/$key.txt');
 	}
 
-        inline static public function xml(key:String)
+	inline static public function xml(key:String)
 	{
 		return file('data/$key.xml');
 	}
@@ -64,4 +63,4 @@ class Paths
 	{
 		return FlxAtlasFrames.fromSpriteSheetPacker(image(key), file('images/$key.txt'));
 	}
-}  
+}
