@@ -1,7 +1,14 @@
 package;
 
-import flixel.text.FlxText;
+import flixel.FlxG;
+import flixel.FlxObject;
+import flixel.FlxSprite;
 import flixel.FlxState;
+import flixel.text.FlxText;
+import flixel.system.FlxSound;
+import flixel.util.FlxCollision;
+import flixel.util.FlxColor;
+import Paths;
 
 class PlayState extends FlxState
 {
