@@ -3,7 +3,7 @@ package objects;
 import flixel.FlxSprite;
 import flixel.graphics.frames.FlxAtlasFrames;
 
-Class Ornament extends FlxSprite
+class Ornament extends FlxSprite
 {
     //wip
 }
