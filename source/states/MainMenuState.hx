@@ -1,4 +1,4 @@
-package;
+package states;
 
 import flixel.FlxG;
 import flixel.FlxState;
@@ -6,6 +6,8 @@ import Menu.MenuSelection;
 import flixel.util.FlxColor;
 import haxe.Log;
 import lime.app.Application;
+import util.*;
+import states.*;
 
 class MainMenuState extends FlxState
 {
@@ -27,7 +29,7 @@ class MainMenuState extends FlxState
 			{
 				case 0:
 					trace('Select Song');
-					FlxG.switchState(new MusicSelectState());
+					FlxG.switchState(new PlayState());
 				case 1:
 					/*trace('How it Works');
 					FlxG.switchState(new InstructionsState());
