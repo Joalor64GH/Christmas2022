@@ -1,3 +1,3 @@
-# HaxeFlixel Template
+# The Christmas Game
 
-Just a simple template for making games with Flixel.
+It's a game for Christmas.
