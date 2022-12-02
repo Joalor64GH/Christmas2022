@@ -79,7 +79,7 @@ class Menu extends FlxSubState
 	{
 		if (ready)
 		{
-			// Curser left/right bop thingy
+			// Cursor left/right bop thingy
 			cursor.x += Math.sin(uhhhh);
 			cursor.setGraphicSize(Std.int(cursor.width += Math.sin(uhhhh))); // very bad but works lmao
 			uhhhh += 0.1;
