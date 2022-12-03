@@ -17,7 +17,7 @@ class Ornament extends FlxSprite
 			"purple", "red", "rose", "scarlet", "teal", "white"
 		];
 
-                loadGraphic(Paths.image('ornaments/$COLORS'));
+        loadGraphic(Paths.image('ornaments/$COLORS'));
 
 		ornaments = new FlxTypedSpriteGroup<FlxSprite>();
 

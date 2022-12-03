@@ -110,10 +110,18 @@ class Menu extends FlxSubState
 			else if (FlxG.keys.justPressed.ENTER && !justPressedEnter && currentOption >= 0 && currentOption <= maxOptions)
 			{
 				// Close Menu action
-				flashArrow();
-				justPressedEnter = true; // lock inputs
-				FlxG.sound.play(Paths.sound('selection'));
-				new FlxTimer().start(2, doAction, 1);
+				// shit solution, but I tried many ways okay?
+				if (currentOption == 1) {
+					FlxG.sound.play(Paths.sound('error'));
+					trace('unfinished ' + options.toString());
+					FlxG.camera.shake(0.025, 0.2465);
+				}
+				else {
+					flashArrow();
+					justPressedEnter = true; // lock inputs					
+					FlxG.sound.play(Paths.sound('selection'));
+					new FlxTimer().start(2, doAction, 1);
+				}
 			}
 		}
 	}

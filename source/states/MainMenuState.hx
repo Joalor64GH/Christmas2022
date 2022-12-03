@@ -18,7 +18,7 @@ class MainMenuState extends FlxState
 
 		// Create menu
 		Menu.title = "The Christmas Game";
-		Menu.options = ['Play', /*'How it Works',*/ 'Exit'];
+		Menu.options = ['Play', 'How it Works', 'Exit'];
 		Menu.includeExitBtn = false;
 		Menu.callback = (option:MenuSelection) ->
 		{
@@ -27,14 +27,15 @@ class MainMenuState extends FlxState
 			switch (option.id)
 			{
 				case 0:
-					trace('Select Song');
+					trace('Selected play');
 					FlxG.switchState(new PlayState());
 				case 1:
-					/*trace('How it Works');
-					FlxG.switchState(new InstructionsState());
-				case 2:*/
+					// trace('How it Works');
+					// FlxG.switchState(new InstructionsState());
+
+				case 2:
 					trace('Exit');
-					#if (windows || cpp)
+					#if sys // this works on all sys platforms bruh
 					Sys.exit(0);
 					#else
 					openfl.system.System.exit(0);

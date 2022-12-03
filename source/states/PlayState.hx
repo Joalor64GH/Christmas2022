@@ -15,6 +15,8 @@ class PlayState extends FlxState
 {
     public var WIPText:FlxText;
 
+    public var snow:Snow;
+
     override public function create()
     {
         super.create();
@@ -32,6 +34,10 @@ class PlayState extends FlxState
 		WIPText.setFormat(Paths.font("vcr.ttf"), 54, FlxColor.WHITE, FlxTextAlign.CENTER,FlxTextBorderStyle.OUTLINE,FlxColor.BLACK);
 
 		add(WIPText);
+
+        if (snow != null){
+            add(snow);
+        }
     }
 
     override public function update(elapsed:Float)
@@ -39,8 +45,14 @@ class PlayState extends FlxState
         super.update(elapsed);
 
         if (FlxG.keys.justPressed.ESCAPE)
-	{
-		FlxG.switchState(new MainMenuState());
-	}
+	    {
+		    FlxG.switchState(new MainMenuState());
+	    }
+    }
+
+    // should make some objects null to help garbage collection
+    override function destroy(){
+        super.destroy();
+        snow = null;
     }
 }
