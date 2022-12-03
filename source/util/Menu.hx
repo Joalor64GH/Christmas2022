@@ -129,17 +129,17 @@ class Menu extends FlxSubState
 	}
 
 	// Arrow logic or smth
-	function moveArrowDown()
+	inline function moveArrowDown()
 	{
 		FlxTween.tween(cursor, {y: cursor.y + 40}, 0.2, {ease: FlxEase.quadInOut});
 	}
 
-	function moveArrowUp()
+	inline function moveArrowUp()
 	{
 		FlxTween.tween(cursor, {y: cursor.y - 40}, 0.2, {ease: FlxEase.quadInOut});
 	}
 
-	function flashArrow()
+	inline function flashArrow()
 	{
 		new FlxTimer().start(0.1, (timer:FlxTimer) ->
 		{
@@ -147,7 +147,7 @@ class Menu extends FlxSubState
 		}, 0);
 	}
 
-	function doAction(?timer:FlxTimer)
+	inline function doAction(?timer:FlxTimer)
 	{
 		trace("eugh");
 		if (includeExitBtn && currentOption == maxOptions)
@@ -161,7 +161,7 @@ class Menu extends FlxSubState
 		}
 	}
 
-	function splitText(returnOption:Int)
+	inline function splitText(returnOption:Int)
 	{
 		var tempArray = optionsT.text.trim().split('\n');
 
