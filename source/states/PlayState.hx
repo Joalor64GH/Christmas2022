@@ -19,6 +19,8 @@ class PlayState extends FlxState
 
     override public function create()
     {
+        openfl.system.System.gc();
+
         super.create();
 
         var bg:FlxSprite = new FlxSprite(-80).loadGraphic(Paths.image('background'));

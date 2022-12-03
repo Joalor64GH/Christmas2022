@@ -40,6 +40,8 @@ class Menu extends FlxSubState
 
 	public override function create()
 	{
+		openfl.system.System.gc();
+
 		cb = callback.bind(_);
 
 		var titleT = new FlxText(20, 0, 0, title, 40, true);
