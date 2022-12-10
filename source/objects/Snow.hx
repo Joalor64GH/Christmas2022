@@ -16,9 +16,9 @@ class Snow extends FlxSprite
         snowMiddle.velocity.set(0, -30);
         snowBack.velocity.set(0, -10);
     
-        FlxG.state.add(snowFront);
-        FlxG.state.add(snowMiddle);
-        FlxG.state.add(snowBack);
+        // FlxG.state.add(snowFront);
+        // FlxG.state.add(snowMiddle);
+        // FlxG.state.add(snowBack);
 
         super();
     }
