@@ -17,9 +17,13 @@ class PlayState extends FlxState
 
     public var snow:Snow;
 
+    public static var instance:PlayState;
+
     override public function create()
     {
         openfl.system.System.gc();
+
+        instance = this;
 
         super.create();
 
@@ -36,10 +40,9 @@ class PlayState extends FlxState
 		WIPText.setFormat(Paths.font("vcr.ttf"), 54, FlxColor.WHITE, FlxTextAlign.CENTER,FlxTextBorderStyle.OUTLINE,FlxColor.BLACK);
 
 		add(WIPText);
-
-        if (snow != null){
-            add(snow);
-        }
+        
+        snow = new Snow();
+        add(snow);
     }
 
     override public function update(elapsed:Float)
@@ -56,5 +59,6 @@ class PlayState extends FlxState
     override function destroy(){
         super.destroy();
         snow = null;
+        instance = null;
     }
 }
